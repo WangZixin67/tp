@@ -17,6 +17,9 @@ public class CommandFinanceChange extends Command {
             String[] contents = input.trim().split(" ");
             int length = contents.length;
             String item = "";
+            if (length <= 1) {
+                return "Syntax: finance changeLog /i INDEX /n ITEM_NAME ITEM_VALUE";
+            }
             for (int i = 0; i < length - 1; i++) {
                 if (i == length - 2) {
                     item = item + contents[i];
